@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{calc}
+\usepackage{leadsheets}
+\usepackage{tabularx}
+\usepackage{printlen}
+\pagenumbering{gobble}
+
+\addtolength{\topmargin}{-.15in}
+\addtolength{\textheight}{.35in}
+
+\begin{document}
+
+% Lyrics: https://nickshoulders.bandcamp.com/track/too-old-to-dream
+% Chords: https://tabs.ultimate-guitar.com/tab/nick-shoulders/too-old-to-dream-chords-3111653
+
+\setleadsheets{
+    % verses-label-format = \raggedtop
+    % chorus/format =
+}
+
+\newlength{\oneline}
+\newlength{\chordwidth}
+
+\begin{song}[
+    remember-chords,
+    % transpose=5,
+    verse/numbered,
+]{
+    title={Too Old to Dream},
+    composer={Nick Shoulders},
+    key={C},
+    capo=5
+}
+
+\begin{flushright}
+\capo
+\end{flushright}
+
+\setlength{\oneline}{3.25mm}
+\setlength{\chordwidth}{6mm}
+
+% This text is
+% \fontname\font\
+% with font size
+% \csname
+% f@size\endcsname{}
+% and baselineskip
+% =~\the\baselineskip
+% =~\uselengthunit{mm}\printlength{\baselineskip}
+% ~\uselengthunit{in}\printlength{\topmargin} \\
+% ~\uselengthunit{in}\printlength{\bottommargin}
+
+\newcommand\introchords{
+    \ \\
+    \raisebox{\oneline}[\height][\baselineskip]{
+        \begin{tabular}{p{\chordwidth}p{\chordwidth}p{\chordwidth}}
+            _{C} &      & _{Am} \\
+            _{C} &      & _{Am} \\
+            _{C} &      & _{Am} \\
+            _{C} & _{G} & _{C}
+        \end{tabular}
+    }
+}
+
+\begin{intro}
+    \introchords
+\end{intro}
+
+\begin{verse}
+    Some days are ^{C}long, some nights never ^{Am}end \\
+    I’ve ^{C}mourned the fleeting second’s flight, I’ve prayed to the coming ^{Am}wind \\
+    And ^{C}time like snow, it never stood around for ^{Am}me \\
+    I’ve ^{C}loved every ^{F}sky I’ve ever ^{C}seen, and I ^{F}know ^{C} I’ll never ^{G}grow too old to ^{C Am}dream {}
+\end{verse}
+
+\begin{chorus}
+    \introchords
+\end{chorus}
+
+\begin{verse}
+    So if you’re ^low, from the years that didn’t ^stay \\
+    If you ^trace the shadow’s passing if you fear each breaking ^day \\
+    If you ^worry about worry, worry never let you ^be \\
+    If ^devil calls I ^hope that you can ^see, some^how ^ to never ^grow too old to ^dream {}
+\end{verse}
+
+\begin{chorus}
+    \introchords
+\end{chorus}
+
+\begin{interlude}
+    \ \\
+    \raisebox{\oneline}[\height][2.25\baselineskip]{
+        \begin{tabular}{
+            p{\chordwidth}p{\chordwidth}p{\chordwidth}p{\chordwidth}
+            p{\chordwidth}p{\chordwidth}p{\chordwidth}p{\chordwidth}
+            p{\chordwidth}p{\chordwidth}p{\chordwidth}
+        }
+            _{C} &&&&&& _{Am} &&&& \\
+            _{C} &&&&&& _{Am} &&&& \\
+            _{C} &&&&&& _{Am} &&&& \\
+            _{C} && _{F} && _{C} && _{F} && \\
+            _{C} && _{G} && _{C} && _{Am}
+        \end{tabular}
+    }
+    \introchords
+\end{interlude}
+
+\begin{verse}
+    If you’ve grown ^cold, sitting in the headlight’s ^glare \\
+    If you ^long to see the stars again, kicking in the hunter’s ^snare \\
+    Be^loved be not loving, love it never set you ^free \\
+    And ^don’t forget that the ^lost shall be re^deemed some^how, ^ and never ^grow too old to ^dream {}
+\end{verse}
+
+\begin{outro}
+    \introchords
+\end{outro}
+
+\end{song}
+
+\end{document}
