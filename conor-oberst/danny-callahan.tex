@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{leadsheets}
+\usepackage{tabularx}
+\pagenumbering{gobble}
+
+\input{props.tex}
+
+\newlength{\chordwidth}
+
+\begin{document}
+
+% Chords: https://tabs.ultimate-guitar.com/tab/conor-oberst-and-the-mystic-valley-band/danny-callahan-chords-715094
+
+\begin{song}[
+    remember-chords,
+    verse/numbered,
+    % transpose=-2,
+]{
+    title={Danny Callahan},
+    % composer={Cyndi Lauper},
+    band={\band},
+    key={C},
+}
+
+\vspace{-7.75mm}
+\hspace*{\fill}
+% \songproperty{composer}, \songproperty{band}
+\songproperty{band}
+
+% \setleadsheets{smash-chords=true}
+
+\newcommand\introchords{
+  _{F#m} \quad _{F} \quad _{F#m} \quad _{F} \quad _{E}
+}
+
+\begin{intro}
+    \introchords
+\end{intro}
+
+\begin{verse}
+  ^{A} Green world, lovely chloroform \\
+  ^{Bm} Front porch in the thunderstorm \\
+  ^{D} Controlled chaos, ^-{Bm} confused ener^{A}gy \\
+  ^{A} Stop reading the weather charts \\
+  ^{Bm} Stop counting the playing cards \\
+  ^{D} There's no system, ^-{Bm} there's no guaran^*-{A} tee \\
+
+  That the ^{D}love you feel and carry in^{E}side can be ^{A}passed \\
+  You ^{D}try, I know you do, you still ^{E}talk to your ^{A}plants \qquad ^{F#m} \\
+  Ask, ``How are you ^{Bm}getting on a^{E}lone?''
+\end{verse}
+
+\begin{verse}
+^ Some wander the wilderness \\
+^ Some drink cosmopolitans \\
+^ Some cull science, ^- some glean astral ^planes \\
+^ I can't tell where the canvas stops \\
+^ Homesick as an astronaut \\
+^ Just keep drifting, ^- but still can't ex^plain \\
+
+How the ^love we feel we carry in^side can be ^passed \\
+See your ^brother in the gutter, you ^reach out your ^hand \qquad ^ {} \\
+Ask, ``How are you ^getting on a^lone?''
+\end{verse}
+
+\begin{interlude}
+  % _{A} \qquad\qquad _{Bm} \\
+  % _{D} \quad _{Bm} \quad _{A} \qquad (repeat) \\
+  _{A} \qquad _{Bm} \qquad _{D} \quad _{Bm} \quad _{A} \quad (repeat) \\
+  \introchords
+\end{interlude}
+
+\newpage
+
+\begin{verse}
+^ What gauge measures miracles? \\
+^ Whose heart beats electrical? \\
+^ We feign sickness ^- with our modern ^joy \\
+^ Even Western medicine \\
+^ It couldn't save Danny Callahan \\
+^ Bad bone marrow, ^- a bald little ^boy \\
+
+But the ^love he feels he carries in^side can be ^passed \\
+He lay ^still, his mother kissed him good^bye \\
+Said, ``Come ^back, ^- where are you ^going to a^lone?'' \\
+  ``Where are you \chord{Bm}going all a\chord{E}lone?''
+\end{verse}
+
+\begin{outro}
+  % _{A} \qquad\qquad\qquad\qquad _{Bm} \\
+  % _{D} \qquad\qquad _{Bm} \qquad\qquad _{A} \\
+  _{A} \qquad _{Bm} \qquad _{D} \quad _{Bm} \quad _{A} \quad \\
+  \introchords
+\end{outro}
+
+% \setlength{\chordwidth}{4mm}
+% \begin{intro}
+% \begin{tabular}{p{\chordwidth}p{\chordwidth}p{\chordwidth}p{\chordwidth}p{\chordwidth}p{\chordwidth}p{\chordwidth}}
+%   _{A} & & _{Bm} & & _{D} & _{Bm} & _{A}  \\
+%   _{F#m} &  _{F} & &   _{F#m}  &  _{F} & &  _{E}
+% \end{tabular}
+% \end{intro}
+
+
+\end{song}
+
+\end{document}
