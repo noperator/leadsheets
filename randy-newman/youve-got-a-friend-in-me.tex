@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{leadsheets}
+\usepackage{tabularx}
+\pagenumbering{gobble}
+
+\input{props.tex}
+
+\newlength{\chordwidth}
+
+\begin{document}
+
+% Chords: https://tabs.ultimate-guitar.com/tab/randy-newman/youve-got-a-friend-in-me-chords-107274
+
+\begin{song}[
+    remember-chords,
+    verse/numbered,
+]{
+  title={You've Got a Friend in Me},
+    band={\band},
+    key={C},
+}
+
+\vspace{-7.75mm}
+\hspace*{\fill}
+\songproperty{band}
+
+\newcommand\introchords{
+  _{C} _{E7} _{Am} _{G#7} _{C} _{G}
+}
+
+\begin{intro}
+  \introchords _{G+} _{C9} _{G+}
+\end{intro}
+
+% * gobble trailing space
+% - smash next chord
+
+\begin{verse}
+  ^{C}You've got a ^{G+}friend in ^{C}me \quad ^{C7} \\
+  ^{F}You've got a ^{F#dim7}friend in ^{C}me \quad ^{C7} \\
+  ^{F} When the ^{C}road looks ^-{E7} rough a^{Am}head \\
+  And you're ^{F}miles and ^{C}miles from your ^{E7}nice warm ^{Am}bed \\
+  ^{F} You just re^{C}member what your ^{E7}old pal ^{Am}said \\
+  Boy, ^{D7}you've got a ^{G}friend in ^{C}me \quad ^{A7} \\
+  Yeah, ^{D7}you've got a ^{G}friend in me \\
+  \introchords
+\end{verse}
+
+\begin{verse}
+  ^You've got a ^friend in ^me \quad ^ {} \\
+  ^You've got a ^friend in ^me \quad ^ {} \\
+  ^ You got ^troubles, ^ I've got 'em ^too \\
+  ^ There isn't ^anything ^ I wouldn't ^do for you \\
+  ^ We stick to^gether, we can ^see it ^through \\
+  'Cause ^you've got a ^friend in ^me \quad ^ {} \\
+  ^You've got a ^friend in \chord{C}me \quad \chord{C7}
+\end{verse}
+
+\begin{bridge}
+  ^{F} Some other folks might be a ^{B}little bit smarter than I am \\
+  ^{C}Bigger and ^{B7}stronger ^{C}too, maybe \\
+  ^{B} But none of them will ^{B7}ever love you \\
+  The ^{Em}way I ^{A7}do \\
+  It's ^{Dm}me and ^{G}you, boy
+\end{bridge}
+
+\begin{verse}
+  ^ And as the ^years go by ^ {} \\
+  Our ^friendship will ^never ^die {} \\
+  ^ You're gonna \chord{F#dim7}see it's our \chord{C}des\chord{E7}ti\chord{Am}ny \\
+  \chord{D7}You've got a \chord{G}friend in \chord{A7}me \\
+  \chord{D7}You've got a \chord{G}friend in \chord{A7}me \\
+  \chord{D7}You've got a \chord{G}friend in me \\
+  \introchords
+\end{verse}
+
+
+\end{song}
+
+\end{document}
