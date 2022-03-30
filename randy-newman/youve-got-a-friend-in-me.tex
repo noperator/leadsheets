@@ -2,6 +2,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{leadsheets}
 \usepackage{tabularx}
+\usepackage{xstring}
 \pagenumbering{gobble}
 
 \input{props.tex}
@@ -25,54 +26,57 @@
 \hspace*{\fill}
 \songproperty{band}
 
-\newcommand\introchords{
-  _{C} _{E7} _{Am} _{G#7} _{C} _{G}
+\newcommand\tailintrochords{
+  _{E7} \quad _{Am} \quad _{G#7} \quad _{C} \quad _{G}
 }
 
 \begin{intro}
-  \introchords _{G+} _{C9} _{G+}
+  _{C} \quad \tailintrochords
+  \vspace{1mm} \\
+  _{C} \quad _{G+} \quad _{C9} \quad _{G+}
 \end{intro}
 
 % * gobble trailing space
 % - smash next chord
 
 \begin{verse}
-  ^{C}You've got a ^{G+}friend in ^{C}me \quad ^{C7} \\
-  ^{F}You've got a ^{F#dim7}friend in ^{C}me \quad ^{C7} \\
-  ^{F} When the ^{C}road looks ^-{E7} rough a^{Am}head \\
+  ^*-{C}You 've got a ^{G+}friend in ^{C}me \quad ^{C7} \\
+  ^*-{F} You've got a ^{F#dim7}friend in ^{C}me \quad ^{C7} \\
+  ^*-{F} When the ^{C}road looks ^-{E7} rough a^{Am}head \\
   And you're ^{F}miles and ^{C}miles from your ^{E7}nice warm ^{Am}bed \\
-  ^{F} You just re^{C}member what your ^{E7}old pal ^{Am}said \\
-  Boy, ^{D7}you've got a ^{G}friend in ^{C}me \quad ^{A7} \\
-  Yeah, ^{D7}you've got a ^{G}friend in me \\
-  \introchords
+  ^*-{F} You just re^*{C}mem ber what your ^{E7}old pal ^{Am}said \\
+  Boy, ^*{D7}you 've got a ^{G}friend in ^{C}me \quad ^{A7} \\
+  Yeah, ^*{D7}you 've got a ^{G}friend in ^{C}me \quad
+  \StrSubstitute{\tailintrochords}{_}{\chord}
 \end{verse}
 
 \begin{verse}
-  ^You've got a ^friend in ^me \quad ^ {} \\
-  ^You've got a ^friend in ^me \quad ^ {} \\
-  ^ You got ^troubles, ^ I've got 'em ^too \\
-  ^ There isn't ^anything ^ I wouldn't ^do for you \\
-  ^ We stick to^gether, we can ^see it ^through \\
-  'Cause ^you've got a ^friend in ^me \quad ^ {} \\
-  ^You've got a ^friend in \chord{C}me \quad \chord{C7}
+  ^*- You've got a ^friend in ^me \quad ^ {} \\
+  ^*- You've got a ^friend in ^me \quad ^ {} \\
+  ^*- You got ^*trou bles, ^- I've got 'em ^too \\
+  ^*- There isn't ^*any thing I ^*wou ldn't ^-do for you \\
+  ^*- We stick to^*get her, we can ^see it ^through \\
+  'Cause ^*you 've got a ^friend in ^me \quad ^ {} \\
+  ^*- You've got a ^friend in \chord{C}me \quad \chord{C7}
 \end{verse}
 
 \begin{bridge}
-  ^{F} Some other folks might be a ^{B}little bit smarter than I am \\
-  ^{C}Bigger and ^{B7}stronger ^{C}too, maybe \\
-  ^{B} But none of them will ^{B7}ever love you \\
-  The ^{Em}way I ^{A7}do \\
-  It's ^{Dm}me and ^{G}you, boy
+  ^*-{F} Some other folks might be a ^*-{B} little bit smarter than I am \\
+  ^*-{C} Bigger and ^*{B7}stro nger ^{C}too, maybe \\
+  ^*-{B} But none of them will ^{B7}ever love you \\
+  The ^{Em}way I ^-{A7}do, it's ^-{Dm}me and ^{G}you, boy
 \end{bridge}
 
+\newpage
+
 \begin{verse}
-  ^ And as the ^years go by ^ {} \\
-  Our ^friendship will ^never ^die {} \\
-  ^ You're gonna \chord{F#dim7}see it's our \chord{C}des\chord{E7}ti\chord{Am}ny \\
-  \chord{D7}You've got a \chord{G}friend in \chord{A7}me \\
-  \chord{D7}You've got a \chord{G}friend in \chord{A7}me \\
-  \chord{D7}You've got a \chord{G}friend in me \\
-  \introchords
+  ^*- And as the ye^ars go by ^ {} \quad ^ {} \\
+  Our ^*friend ship will ^*-ne ver ^die \quad ^ {} \\
+  \chord*-{F} You're gonna \chord-{F#dim7}see it's our \chord*-{C}des -\chord*-{E7}ti -\chord-{Am}ny {} \\
+  \chord*-{D7} You've got a \chord{G}friend in me \chord{C} \quad \chord{A7} {} \\
+  \chord*-{D7} You've got a \chord{G}friend in me \chord{C} \quad \chord{A7} {} \\
+  \chord*-{D7} You've got a \chord{G}friend in \chord{C}me \quad
+  \StrSubstitute{\tailintrochords}{_}{\chord} \quad \chord{C}
 \end{verse}
 
 
